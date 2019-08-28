@@ -1,4 +1,18 @@
 body {
     background-image: linear-gradient( 180.3deg,  rgba(221,221,221,1) 5.5%, rgba(110,136,161,1) 90.2% );
-    background-repeat: no-repeat;
+    background-repeat: no-repeat
+}
+
+
+#profile {
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in;
+       -moz-transition: opacity 1s ease-in;
+        -ms-transition: opacity 1s ease-in;
+         -o-transition: opacity 1s ease-in;
+            transition: opacity 1s ease-in;
+}
+
+#profile.load {
+    opacity: 1;
 }
