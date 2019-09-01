@@ -93,3 +93,20 @@ let resumeExpand = async () => {
 }
 
 resumeButton.click(resumeExpand);
+
+
+let projects = $("#projects-display");
+let projectButton = $("#project-expand")
+
+let projectExpand = async () => {
+	if(projects.is(":hidden")) {
+		await projects.slideDown("slow").css('display', 'flex');
+		projectButton.text("HIDE");
+	} else {
+		await projects.slideUp();
+		projectButton.text("SHOW");
+	}
+	
+}
+
+projectButton.click(projectExpand);

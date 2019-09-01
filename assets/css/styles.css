@@ -17,6 +17,7 @@ body {
     opacity: 1;
 }
 
-#resume-iframe {
+#resume-iframe,
+#projects-display {
     display: none;
 }
