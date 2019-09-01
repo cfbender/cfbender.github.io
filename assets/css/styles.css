@@ -16,3 +16,7 @@ body {
 #profile.load {
     opacity: 1;
 }
+
+#resume-iframe {
+    display: none;
+}
