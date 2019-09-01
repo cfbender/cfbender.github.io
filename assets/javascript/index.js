@@ -113,16 +113,20 @@ projectButton.click(projectExpand);
 
 
 
-$("form-send").click(() => {
+$("form-send").click((e) => {	
 	let name = $("#grid-name").val();
 	let email = $("#grid-email").val();
 	let message = $("#grid-message").val();
 
 	if (name === "" || email === "" || message === ""){
 		$("#form-error").show();
+		return false;
 	} else {
 		$("#form-error").hide();
 		$("#contact-form").submit();
+		$("#grid-name").val("");
+		$("#grid-email").val("");
+		$("#grid-message").val("");
 	}
-
+	e.preventDefault();
 })
