@@ -111,9 +111,11 @@ let projectExpand = async () => {
 
 projectButton.click(projectExpand);
 
+$("#contact-form").submit((e) => {
+	e.preventDefault();
+})
 
-
-$("form-send").click((e) => {	
+$("#form-send").click(() => {	
 	let name = $("#grid-name").val();
 	let email = $("#grid-email").val();
 	let message = $("#grid-message").val();
@@ -128,5 +130,5 @@ $("form-send").click((e) => {
 		$("#grid-email").val("");
 		$("#grid-message").val("");
 	}
-	e.preventDefault();
+	
 })
