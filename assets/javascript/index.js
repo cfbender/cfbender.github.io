@@ -79,15 +79,19 @@ function checkParent(t, elm) {
 }
 
 let resumeButton = $("#resume-button");
-let resume = $("#resume-iframe");
+let resume = $("#resume-iframe-container");
 
 let resumeExpand = async () => {
-	if(resume.is(":hidden")) {
-		await resume.slideDown("slow");
-		resumeButton.text("Hide me!");
+	if ($(window).width() >= 1025){
+		if(resume.is(":hidden")) {
+			await resume.slideDown("slow");
+			resumeButton.text("Hide me!");
+		} else {
+			await resume.slideUp();
+			resumeButton.text("Show me!");
+		}
 	} else {
-		await resume.slideUp();
-		resumeButton.text("Show me!");
+		window.location.href = "./assets/resume.pdf";
 	}
 	
 }
