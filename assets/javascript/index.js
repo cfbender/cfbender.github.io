@@ -110,3 +110,19 @@ let projectExpand = async () => {
 }
 
 projectButton.click(projectExpand);
+
+
+
+$("form-send").click(() => {
+	let name = $("#grid-name").val();
+	let email = $("#grid-email").val();
+	let message = $("#grid-message").val();
+
+	if (name === "" || email === "" || message === ""){
+		$("#form-error").show();
+	} else {
+		$("#form-error").hide();
+		$("#contact-form").submit();
+	}
+
+})
